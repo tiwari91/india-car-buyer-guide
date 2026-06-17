@@ -3,381 +3,387 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>India New Car Buyer Guide — Compare ₹7–14L Cars (2026)</title>
-<meta name="description" content="Interactive comparison of popular Indian cars (Maruti, Honda, Tata, Hyundai, Skoda) by price, mileage, ground clearance, safety, boot and 10-year cost-to-own. CSD prices, clearly labelled.">
+<title>India New Car Buyer Guide — Compare ₹7–16L Cars (2026)</title>
+<meta name="description" content="Interactive comparison of 20+ popular Indian cars (Maruti, Honda, Tata, Hyundai, Skoda, Mahindra, Nissan, Kia) by price, mileage, ground clearance, safety, boot, narrow-road fit and 10-year cost-to-own. CSD prices, clearly labelled.">
 <style>
   :root{
-    --bg:#0f1420; --card:#1a2233; --card2:#222d44; --line:#2d3a52;
-    --txt:#e8edf6; --muted:#9fb0cc; --accent:#4da3ff; --good:#3ecf8e;
-    --warn:#ffb454; --bad:#ff6b6b; --pick:#7c5cff;
+    --bg:#0b0f1a; --bg2:#0f1420; --card:#161d2e; --card2:#1f293d; --line:#2a3650;
+    --txt:#eaf0fa; --muted:#94a6c4; --accent:#5aa9ff; --accent2:#8b6bff;
+    --good:#3ddc91; --warn:#ffc15e; --bad:#ff6f6f; --pick:#8b6bff;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    background:var(--bg);color:var(--txt);line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
-  header{background:linear-gradient(135deg,#16213a,#0f1420);padding:42px 0 28px;border-bottom:1px solid var(--line)}
-  h1{margin:0 0 8px;font-size:30px;letter-spacing:-.5px}
-  h2{font-size:22px;margin:38px 0 6px;letter-spacing:-.3px}
-  h3{font-size:16px;margin:22px 0 8px;color:var(--accent)}
-  .sub{color:var(--muted);font-size:15px;max-width:760px}
-  .badge{display:inline-block;background:var(--card2);border:1px solid var(--line);color:var(--muted);
-    font-size:12px;padding:3px 10px;border-radius:20px;margin:4px 6px 0 0}
-  section{margin:34px 0}
-  .note{background:#1d2740;border-left:3px solid var(--warn);padding:12px 16px;border-radius:6px;
-    font-size:13.5px;color:#dfe7f5;margin:14px 0}
-  .controls{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
-  .controls label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
-  select,input[type=range]{background:var(--card);color:var(--txt);border:1px solid var(--line);
-    border-radius:8px;padding:8px 10px;font-size:14px}
-  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;overflow:hidden;border-radius:10px}
-  th,td{padding:10px 11px;text-align:left;border-bottom:1px solid var(--line)}
-  th{background:var(--card2);cursor:pointer;user-select:none;position:sticky;top:0;font-size:12.5px;
-    text-transform:uppercase;letter-spacing:.4px;color:var(--muted);white-space:nowrap}
+    background:radial-gradient(1200px 600px at 80% -10%,#16213f 0,var(--bg) 55%);color:var(--txt);
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+  header{padding:54px 0 30px}
+  .eyebrow{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+  h1{margin:8px 0 12px;font-size:38px;line-height:1.1;letter-spacing:-1px}
+  h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  h2{font-size:25px;margin:8px 0 4px;letter-spacing:-.4px}
+  h2 .num{color:var(--accent2);font-weight:800;margin-right:8px}
+  h3{font-size:16px;margin:20px 0 8px;color:var(--accent)}
+  .sub{color:var(--muted);font-size:16px;max-width:820px}
+  .badges{margin-top:18px}
+  .badge{display:inline-block;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);
+    font-size:12.5px;padding:5px 12px;border-radius:30px;margin:5px 8px 0 0}
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,15,26,.82);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);padding:11px 0;margin-bottom:8px}
+  nav .wrap{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  nav a{color:var(--muted);text-decoration:none;font-size:13.5px;padding:6px 12px;border-radius:8px;transition:.15s}
+  nav a:hover{color:var(--txt);background:rgba(255,255,255,.05)}
+  section{margin:46px 0;scroll-margin-top:64px}
+  .note{background:linear-gradient(180deg,rgba(255,193,94,.08),rgba(255,193,94,.03));
+    border:1px solid rgba(255,193,94,.25);border-left:3px solid var(--warn);padding:14px 18px;border-radius:10px;
+    font-size:14px;color:#f0e9da;margin:16px 0}
+  .note.blue{background:linear-gradient(180deg,rgba(90,169,255,.08),rgba(90,169,255,.03));
+    border-color:rgba(90,169,255,.25);border-left-color:var(--accent);color:#e4eefb}
+  .controls{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0;background:var(--card);
+    border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .controls label{font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:6px;font-weight:600}
+  select,input[type=range],input[type=search]{background:var(--bg2);color:var(--txt);border:1px solid var(--line);
+    border-radius:9px;padding:9px 11px;font-size:14px;font-weight:400}
+  input[type=search]{min-width:200px}
+  input[type=range]{padding:0;accent-color:var(--accent)}
+  .tableScroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:880px}
+  th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--card2);cursor:pointer;user-select:none;position:sticky;top:0;font-size:11.5px;
+    text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
   th:hover{color:var(--txt)}
-  tr{background:var(--card)}
-  tr:hover{background:#202a40}
-  tr.pick{background:#231d3f}
-  tr.pick:hover{background:#2a2350}
-  td.name{font-weight:600}
-  .tag{font-size:11px;padding:2px 7px;border-radius:5px;font-weight:600;white-space:nowrap}
-  .t-suv{background:#1e3a2e;color:var(--good)}
-  .t-sedan{background:#1e2d4a;color:var(--accent)}
-  .t-cross{background:#3a2e1e;color:var(--warn)}
-  .star5{color:var(--good);font-weight:700}
-  .star4{color:var(--warn);font-weight:700}
-  .starN{color:var(--bad);font-weight:700}
-  .tableScroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-  .bar-row{display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:12px;margin:7px 0;font-size:13.5px}
-  .bar-track{background:var(--card2);border-radius:6px;height:22px;overflow:hidden}
-  .bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:8px;font-size:11.5px;color:#0f1420;font-weight:700}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  @media(max-width:760px){.grid2{grid-template-columns:1fr}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
-  .quiz{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  th.active{color:var(--accent)}
+  th .arr{font-size:10px;opacity:.7}
+  tbody tr{background:var(--card);transition:.12s}
+  tbody tr:hover{background:#1c2740}
+  tr.pick{background:linear-gradient(90deg,rgba(139,107,255,.16),rgba(139,107,255,.04))}
+  tr.pick:hover{background:rgba(139,107,255,.22)}
+  td.name{font-weight:600;white-space:normal;min-width:160px}
+  .brand{display:block;font-size:11px;color:var(--muted);font-weight:500}
+  .tag{font-size:10.5px;padding:3px 8px;border-radius:6px;font-weight:700}
+  .t-SUV{background:rgba(61,220,145,.14);color:var(--good)}
+  .t-Sedan{background:rgba(90,169,255,.14);color:var(--accent)}
+  .t-Crossover{background:rgba(255,193,94,.14);color:var(--warn)}
+  .t-Hatch{background:rgba(255,111,111,.12);color:var(--bad)}
+  .star5{color:var(--good);font-weight:800}
+  .star4{color:var(--warn);font-weight:800}
+  .star3{color:#ff944d;font-weight:800}
+  .starN{color:var(--bad);font-weight:800}
+  .yes{color:var(--good);font-weight:700}
+  .no{color:var(--muted)}
+  .pill{display:inline-block;background:var(--pick);color:#fff;font-size:10px;padding:2px 8px;border-radius:6px;margin-left:6px;font-weight:700;vertical-align:middle}
+  .legend{font-size:12.5px;color:var(--muted);margin-top:10px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:780px){.grid2{grid-template-columns:1fr}h1{font-size:30px}}
+  .bar-row{display:grid;grid-template-columns:150px 1fr 64px;align-items:center;gap:12px;margin:7px 0;font-size:13px}
+  .bar-track{background:var(--card2);border-radius:7px;height:24px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:7px;display:flex;align-items:center;padding-left:9px;font-size:11.5px;color:#0b0f1a;font-weight:800;min-width:42px}
   .quiz button{background:var(--card2);border:1px solid var(--line);color:var(--txt);padding:9px 15px;
-    border-radius:9px;cursor:pointer;font-size:14px;margin:5px 7px 5px 0;transition:.15s}
-  .quiz button:hover{border-color:var(--accent)}
-  .quiz button.sel{background:var(--accent);color:#0f1420;border-color:var(--accent);font-weight:600}
-  #quizResult{margin-top:18px;padding:16px;border-radius:10px;background:#1d2740;display:none}
-  .pill{display:inline-block;background:var(--pick);color:#fff;font-size:12px;padding:2px 9px;border-radius:6px;margin-left:8px}
-  details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:4px 16px;margin:10px 0}
-  summary{cursor:pointer;padding:11px 0;font-weight:600;font-size:15px}
-  details p,details ul{font-size:14px;color:#dbe3f2}
-  footer{border-top:1px solid var(--line);margin-top:50px;padding:24px 0 40px;color:var(--muted);font-size:13px}
+    border-radius:10px;cursor:pointer;font-size:14px;margin:5px 8px 5px 0;transition:.15s}
+  .quiz button:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .quiz button.sel{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;font-weight:700}
+  #quizResult{margin-top:20px;padding:18px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);display:none}
+  details{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:2px 18px;margin:11px 0}
+  summary{cursor:pointer;padding:13px 0;font-weight:600;font-size:15px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary:before{content:"+ ";color:var(--accent);font-weight:800}
+  details[open] summary:before{content:"– "}
+  details p,details ul{font-size:14px;color:#d7e1f2;margin-top:0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:26px 0 50px;color:var(--muted);font-size:13px}
   a{color:var(--accent)}
-  .legend{font-size:12.5px;color:var(--muted);margin-top:8px}
+  .count{color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <h1>🚗 India New Car Buyer Guide <span style="font-size:15px;color:var(--muted)">2026</span></h1>
-    <p class="sub">Compare popular ₹7–14 lakh cars on the things that actually decide a purchase: real price buildup, mileage, ground clearance, safety, boot space, and 10-year cost-to-own. Sort, filter, and use the guided picker.</p>
-    <div>
-      <span class="badge">Maruti · Honda · Tata · Hyundai · Skoda</span>
-      <span class="badge">Sortable & filterable</span>
-      <span class="badge">10-year cost-to-own</span>
-      <span class="badge">Guided "find your car"</span>
-    </div>
+<header class="wrap">
+  <div class="eyebrow">Independent buyer research · 2026</div>
+  <h1>🚗 India New Car <span>Buyer Guide</span></h1>
+  <p class="sub">Compare 20+ popular ₹7–16 lakh cars on what actually decides a purchase: real price buildup, mileage, ground clearance, safety, boot, narrow-road fit, and 10-year cost-to-own. Sort, filter, and use the guided picker.</p>
+  <div class="badges">
+    <span class="badge">Maruti · Honda · Tata · Hyundai · Skoda · Mahindra · Nissan · Kia</span>
+    <span class="badge">20+ models</span>
+    <span class="badge">10-year cost-to-own</span>
+    <span class="badge">Guided "find your car"</span>
   </div>
 </header>
+
+<nav><div class="wrap">
+  <a href="#compare">Compare table</a>
+  <a href="#clearance">Ground clearance</a>
+  <a href="#price">Price ladder</a>
+  <a href="#tco">Cost to own</a>
+  <a href="#framework">Decision framework</a>
+  <a href="#quiz">Find your car</a>
+  <a href="#learn">Buyer FAQ</a>
+</div></nav>
 
 <div class="wrap">
 
   <div class="note">
-    <strong>About the prices:</strong> figures shown are <strong>CSD (defence canteen) on-road, Pune</strong> — captured from real dealer quotes and the AFD portal in mid-2026. <strong>Normal showroom on-road prices run roughly 10–15% higher</strong> (CSD waives part of the GST/cess). Use these as a <em>relative</em> comparison; always confirm the exact figure for your city and scheme with the dealer. Mileage shown is realistic city/highway, not ARAI.
+    <strong>About the prices:</strong> figures are <strong>CSD (defence canteen) on-road, Pune basis</strong>, from real dealer quotes and the AFD portal in mid-2026. <strong>Normal showroom on-road prices run roughly 10–15% higher</strong> (CSD waives part of the GST/cess). Use these as a <em>relative</em> comparison; confirm exact figures for your city and scheme with the dealer. Mileage is realistic city/highway, not ARAI.
   </div>
 
   <!-- ============ COMPARISON TABLE ============ -->
-  <section>
-    <h2>1. Compare cars side by side</h2>
-    <p class="sub">Click any column header to sort. Use the filters to narrow by body type, safety, budget, and minimum ground clearance.</p>
+  <section id="compare">
+    <h2><span class="num">1</span>Compare cars side by side</h2>
+    <p class="sub">Click any column header to sort. Filter by body, safety, budget, clearance, transmission, or search by name. Hover a row for the verdict.</p>
 
     <div class="controls">
+      <label>Search<input type="search" id="fSearch" placeholder="e.g. Brezza, Tata, SUV"></label>
       <label>Body type
-        <select id="fBody">
-          <option value="">All</option>
-          <option value="SUV">SUV</option>
-          <option value="Sedan">Sedan</option>
-          <option value="Crossover">Crossover</option>
-        </select>
+        <select id="fBody"><option value="">All</option><option>SUV</option><option>Sedan</option><option>Crossover</option><option>Hatch</option></select>
+      </label>
+      <label>Transmission
+        <select id="fTrans"><option value="">All</option><option>Manual</option><option>Automatic</option></select>
       </label>
       <label>Min. crash rating
-        <select id="fStar">
-          <option value="0">Any</option>
-          <option value="4">4★ or better</option>
-          <option value="5">5★ only</option>
-        </select>
+        <select id="fStar"><option value="0">Any</option><option value="4">4★+</option><option value="5">5★ only</option></select>
       </label>
-      <label>Max on-road budget: <span id="budgetVal">₹14.0 L</span>
-        <input type="range" id="fBudget" min="7" max="14" step="0.5" value="14">
+      <label>Max budget: <span id="budgetVal">₹16.0 L</span>
+        <input type="range" id="fBudget" min="7" max="16" step="0.5" value="16">
       </label>
-      <label>Min. ground clearance: <span id="gcVal">Any</span>
+      <label>Min. clearance: <span id="gcVal">Any</span>
         <input type="range" id="fGc" min="150" max="220" step="1" value="150">
       </label>
     </div>
+    <p class="count"><span id="rowCount"></span> cars shown</p>
 
     <div class="tableScroll">
       <table id="carTable">
-        <thead>
-          <tr>
-            <th data-k="name">Car</th>
-            <th data-k="body">Body</th>
-            <th data-k="onroad" data-num="1">On-road (CSD)</th>
-            <th data-k="econ" data-num="1">Mileage</th>
-            <th data-k="gc" data-num="1">Clearance</th>
-            <th data-k="star" data-num="1">Crash</th>
-            <th data-k="boot" data-num="1">Boot</th>
-            <th data-k="resale" data-num="1">Resale 7yr</th>
-            <th data-k="tco" data-num="1">10yr own</th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th data-k="name">Car</th>
+          <th data-k="body">Body</th>
+          <th data-k="trans">Trans</th>
+          <th data-k="onroad" data-num="1">On-road (CSD)</th>
+          <th data-k="econ" data-num="1">Mileage</th>
+          <th data-k="gc" data-num="1">Clearance</th>
+          <th data-k="star" data-num="1">Crash</th>
+          <th data-k="boot" data-num="1">Boot</th>
+          <th data-k="width" data-num="1">Width</th>
+          <th data-k="resale" data-num="1">Resale 7yr</th>
+          <th data-k="tco" data-num="1">10yr own</th>
+          <th data-k="adas">ADAS</th>
+        </tr></thead>
         <tbody id="carBody"></tbody>
       </table>
     </div>
-    <p class="legend">On-road = CSD scheme, Pune. Mileage = realistic km/l. Clearance in mm (higher = better for bad roads). 10yr own = total cost to own over 200,000 km incl. fuel, service, depreciation. ★ rating: green 5★, amber 4★, red untested.</p>
+    <p class="legend">On-road = CSD scheme, Pune. Mileage = realistic km/l. Clearance & width in mm. 10yr own = total cost over 200,000 km incl. fuel, service, depreciation. Crash: <span class="star5">5★</span> / <span class="star4">4★</span> / <span class="star3">3★</span> / <span class="starN">NR</span> = not rated. Narrower width = easier on tight lanes.</p>
   </section>
 
-  <!-- ============ GROUND CLEARANCE DIAGRAM ============ -->
-  <section>
-    <h2>2. Ground clearance — why it matters</h2>
-    <p class="sub">On broken rural roads, monsoon waterlogging, and big speed breakers, every mm counts. Below ~170 mm a loaded sedan starts scraping. Above ~190 mm you stop worrying.</p>
+  <!-- ============ GROUND CLEARANCE ============ -->
+  <section id="clearance">
+    <h2><span class="num">2</span>Ground clearance — why it matters</h2>
+    <p class="sub">On broken rural roads, monsoon waterlogging, and big speed breakers, every mm counts. Below ~170 mm a loaded sedan starts scraping; above ~190 mm you stop worrying.</p>
     <div class="card" id="gcChart"></div>
-    <p class="legend">A loaded car loses 15–25 mm of effective clearance. A sedan at 163 mm loaded behaves like ~140 mm.</p>
+    <p class="legend">A loaded car loses 15–25 mm of effective clearance — a 163 mm sedan, fully loaded, behaves like ~140 mm. <span class="star5">Green ≥195</span>, <span class="star4">amber 180–194</span>, <span class="starN">red &lt;180</span>.</p>
   </section>
 
   <!-- ============ PRICE LADDER ============ -->
-  <section>
-    <h2>3. Price ladder (CSD on-road)</h2>
-    <p class="sub">Where each car sits. The cheapest <em>safe</em> family trims start ~₹7.7 L; loaded SUVs reach ~₹13.5 L.</p>
+  <section id="price">
+    <h2><span class="num">3</span>Price ladder (CSD on-road)</h2>
+    <p class="sub">Where each car sits. The cheapest <em>safe</em> family trims start ~₹7.7 L; loaded SUVs reach ~₹13.5 L. Purple = a commonly recommended pick.</p>
     <div class="card" id="priceChart"></div>
   </section>
 
-  <!-- ============ DECISION AXIS ============ -->
-  <section>
-    <h2>4. The decision framework</h2>
+  <!-- ============ COST TO OWN ============ -->
+  <section id="tco">
+    <h2><span class="num">4</span>10-year cost to own</h2>
+    <p class="sub">Sticker price is not the real cost. Over 200,000 km / 10 years, fuel and depreciation dominate. A thirsty car with weak resale can cost ₹3–4 L more to own than a pricier-but-efficient one that holds value.</p>
+    <div class="card" id="tcoChart"></div>
+    <p class="legend">Lower bar = cheaper to own. Includes purchase + fuel + service + tyres/insurance − resale. Treat each as a ±₹1.5 L band, not a quote.</p>
+  </section>
+
+  <!-- ============ FRAMEWORK ============ -->
+  <section id="framework">
+    <h2><span class="num">5</span>The decision framework</h2>
     <div class="grid2">
       <div class="card">
-        <h3 style="margin-top:4px">Smooth-highway profile → lighter, cheaper, thriftier</h3>
-        <p style="font-size:14px;color:#dbe3f2">If you mostly drive good city + highway roads, prioritise <strong>mileage, low price, 5-star safety, boot space</strong>. Sedans and light crossovers win: Dzire, Amaze, Fronx.</p>
+        <h3 style="margin-top:2px">🛣️ Smooth-highway profile</h3>
+        <p style="font-size:14px;color:#d7e1f2">Mostly good city + highway? Prioritise <strong>mileage, low price, 5-star safety, boot space</strong>. Sedans and light crossovers win: Dzire, Amaze, Fronx, Aura.</p>
       </div>
       <div class="card">
-        <h3 style="margin-top:4px">Rough-road / loaded profile → clearance, suspension, resale</h3>
-        <p style="font-size:14px;color:#dbe3f2">If you do village roads, monsoon, ghats, or long loaded trips, prioritise <strong>ground clearance, SUV suspension, resale</strong>. Compact SUVs win: Brezza, Nexon, Victoris.</p>
+        <h3 style="margin-top:2px">🪨 Rough-road / loaded profile</h3>
+        <p style="font-size:14px;color:#d7e1f2">Village roads, monsoon, ghats, long loaded trips? Prioritise <strong>ground clearance, SUV suspension, resale</strong>. Compact SUVs win: Brezza, Nexon, XUV 3XO, Victoris.</p>
       </div>
     </div>
-    <div class="note" style="border-left-color:var(--accent)">
-      <strong>The single most useful question:</strong> what are the <em>worst</em> roads you'll drive regularly (or on your once-a-year trip)? Optimise for those, not for the highway you're on most days. The bad roads are where a wrong choice hurts.
+    <div class="note blue">
+      <strong>The single most useful question:</strong> what are the <em>worst</em> roads you'll drive regularly (or on your once-a-year trip)? Optimise for those, not the highway you're on most days — the bad roads are where a wrong choice hurts. And remember: <strong>narrow city lanes punish a wide/tall SUV</strong>, so width and turning radius matter as much as clearance if you park in tight spots.
     </div>
   </section>
 
-  <!-- ============ FIND YOUR CAR QUIZ ============ -->
-  <section>
-    <h2>5. Find your car</h2>
-    <p class="sub">Answer four quick questions for a data-backed shortlist.</p>
-    <div class="quiz">
-      <h3 style="margin-top:2px">a) Your budget (on-road, CSD basis)</h3>
-      <div data-q="budget">
-        <button data-v="8">Up to ₹8 L</button>
-        <button data-v="10">₹8–10 L</button>
-        <button data-v="12">₹10–12 L</button>
-        <button data-v="14">₹12 L+</button>
-      </div>
+  <!-- ============ QUIZ ============ -->
+  <section id="quiz">
+    <h2><span class="num">6</span>Find your car</h2>
+    <p class="sub">Answer five quick questions for a data-backed shortlist.</p>
+    <div class="card quiz">
+      <h3 style="margin-top:2px">a) Budget (on-road, CSD basis)</h3>
+      <div data-q="budget"><button data-v="8">Up to ₹8 L</button><button data-v="10">₹8–10 L</button><button data-v="12">₹10–12 L</button><button data-v="16">₹12 L+</button></div>
       <h3>b) Roads you mostly drive</h3>
-      <div data-q="road">
-        <button data-v="smooth">Mostly good city/highway</button>
-        <button data-v="mixed">Mixed, some bad patches</button>
-        <button data-v="rough">Rough / rural / monsoon / ghats</button>
-      </div>
+      <div data-q="road"><button data-v="smooth">Good city/highway</button><button data-v="mixed">Mixed, some bad patches</button><button data-v="rough">Rough / rural / monsoon / ghats</button></div>
       <h3>c) Top priority</h3>
-      <div data-q="prio">
-        <button data-v="value">Lowest cost to own</button>
-        <button data-v="safety">5-star safety</button>
-        <button data-v="space">Space & comfort</button>
-        <button data-v="resale">Resale value</button>
-      </div>
+      <div data-q="prio"><button data-v="value">Lowest cost to own</button><button data-v="safety">5-star safety</button><button data-v="space">Space & comfort</button><button data-v="resale">Resale value</button></div>
       <h3>d) Body preference</h3>
-      <div data-q="body">
-        <button data-v="any">No preference</button>
-        <button data-v="SUV">SUV stance</button>
-        <button data-v="Sedan">Sedan</button>
-      </div>
+      <div data-q="body"><button data-v="any">No preference</button><button data-v="SUV">SUV stance</button><button data-v="Sedan">Sedan</button></div>
+      <h3>e) Gearbox</h3>
+      <div data-q="trans"><button data-v="any">Either</button><button data-v="Manual">Manual</button><button data-v="Automatic">Automatic</button></div>
       <div id="quizResult"></div>
     </div>
   </section>
 
-  <!-- ============ EXPLAINERS ============ -->
-  <section>
-    <h2>6. Things every buyer should understand</h2>
+  <!-- ============ FAQ ============ -->
+  <section id="learn">
+    <h2><span class="num">7</span>Things every buyer should understand</h2>
 
-    <details>
-      <summary>What does "on-road price" actually include?</summary>
-      <p>Ex-showroom is just the start. On-road = ex-showroom + <strong>insurance</strong> (1st year, recurs annually) + <strong>RTO road tax</strong> (~10–12% in Maharashtra, varies by state) + <strong>registration</strong> + <strong>FASTag</strong> + optional <strong>extended warranty</strong> and accessories. The RTO tax and insurance are the big jumps — budget ₹1.5–2 L over ex-showroom for a ₹8 L car.</p>
-    </details>
+    <details><summary>What does "on-road price" actually include?</summary>
+      <p>Ex-showroom is just the start. On-road = ex-showroom + <strong>insurance</strong> (1st year, recurs annually) + <strong>RTO road tax</strong> (~10–12% in Maharashtra, varies by state) + <strong>registration</strong> + <strong>FASTag</strong> + optional <strong>extended warranty</strong> and accessories. RTO tax and insurance are the big jumps — budget ₹1.5–2 L over ex-showroom for a ₹8 L car.</p></details>
 
-    <details>
-      <summary>What is the CSD scheme and can I use it?</summary>
-      <p>CSD (Canteen Stores Department) is the <strong>defence forces' subsidised purchase scheme</strong> — serving and ex-servicemen get cars with part of the GST/cess waived, so ex-showroom is ~10–15% lower than the public price. If you're not eligible, your real price will be higher than the figures on this page; treat them as a relative comparison, not your quote.</p>
-    </details>
+    <details><summary>What is the CSD scheme and can I use it?</summary>
+      <p>CSD (Canteen Stores Department) is the <strong>defence forces' subsidised purchase scheme</strong> — serving and ex-servicemen get cars with part of the GST/cess waived, so ex-showroom is ~10–15% lower than the public price. If you're not eligible, your real price will be higher than the figures here; treat them as relative comparison, not your quote.</p></details>
 
-    <details>
-      <summary>Is the extended warranty worth it?</summary>
-      <p>Standard warranty is usually 3 years / 1,00,000 km. The extended warranty (~₹16–21k) adds <strong>years 4–5</strong>. Worth it if you keep the car long-term — a single failure of an electronic module (infotainment, ESP/ABS, sensors) in year 4–5 can cost ₹25–60k, more than the warranty. Skip it only if you sell within 3 years. It covers mechanical/electrical breakdown, NOT wear items (brakes, clutch, tyres) or accident damage.</p>
-    </details>
+    <details><summary>Is the extended warranty worth it?</summary>
+      <p>Standard warranty is usually 3 years / 1,00,000 km. The extended warranty (~₹16–21k) adds <strong>years 4–5</strong>. Worth it if you keep the car long-term — one electronic-module failure (infotainment, ESP/ABS, sensors) in year 4–5 can cost ₹25–60k, more than the warranty. Skip it only if you sell within 3 years. It covers mechanical/electrical breakdown, NOT wear items (brakes, clutch, tyres) or accident damage.</p></details>
 
-    <details>
-      <summary>Mild-hybrid li-ion battery — should I worry?</summary>
-      <p>Some Maruti petrols ("Smart Hybrid") add a small li-ion battery for idle stop-start and torque assist (better mileage). It's a <strong>minor failure-risk item</strong> out of warranty (~₹50–65k to replace), but rare and livable. The upside is ~2 km/l better economy. Not a dealbreaker, just a known line item.</p>
-    </details>
+    <details><summary>Mild-hybrid li-ion battery — should I worry?</summary>
+      <p>Some Maruti petrols ("Smart Hybrid") add a small li-ion battery for idle stop-start and torque assist (better mileage). It's a <strong>minor out-of-warranty risk</strong> (~₹50–65k to replace), but rare and livable. Upside: ~2 km/l better economy. Not a dealbreaker, just a known line item.</p></details>
 
-    <details>
-      <summary>Do seat covers affect side airbags?</summary>
-      <p>Yes — if your car has <strong>seat-mounted side airbags</strong> (most 6-airbag cars do), the airbag deploys through a seam on the outer edge of the front seat. A cheap aftermarket cover that wraps that seam tightly can block deployment. Use the genuine/dealer cover, or insist on an <strong>"airbag-compatible"</strong> aftermarket cover with the tear-seam.</p>
-    </details>
+    <details><summary>Turbo vs naturally-aspirated (NA) engine?</summary>
+      <p><strong>Turbo</strong> (Nexon, Kylaq, XUV 3XO, Venue 1.0T) gives more power and punch, but adds complexity and long-term reliability questions, and can be costlier to maintain past warranty. <strong>NA</strong> (Maruti 1.2/1.5, Honda) is simpler, proven, and cheaper to run, with less outright grunt. For a long-keep family car driven sensibly, NA is the safer bet; pick turbo if you value performance and will sell before high mileage.</p></details>
 
-    <details>
-      <summary>Hill start — do I need the handbrake on an incline?</summary>
-      <p>Most modern cars have <strong>Hill Hold Assist</strong> (standard on many trims now). Stop on the incline, release the brake, and the car holds itself ~2 seconds while you move to the accelerator — no roll-back, no handbrake needed. The handbrake method still works and is a fine habit for very steep slopes, but it's optional when Hill Hold is fitted. The handbrake's real job is parking on slopes.</p>
-    </details>
+    <details><summary>Do seat covers affect side airbags?</summary>
+      <p>Yes — if your car has <strong>seat-mounted side airbags</strong> (most 6-airbag cars do), the airbag deploys through a seam on the outer front-seat edge. A cheap aftermarket cover wrapping that seam tightly can block deployment. Use the genuine/dealer cover, or insist on an <strong>"airbag-compatible"</strong> aftermarket cover with the tear-seam.</p></details>
 
-    <details>
-      <summary>Why does resale value matter so much?</summary>
-      <p>Over a 7–10 year keep, depreciation is often the <strong>single biggest cost</strong> — bigger than fuel or service. A car that holds 70% of value (Maruti) vs 40% (some others) can be ₹2–3 L cheaper to own despite a higher sticker. Resale is why a pricier-but-popular car can be the cheaper long-term choice.</p>
-    </details>
+    <details><summary>Hill start — do I need the handbrake on an incline?</summary>
+      <p>Most modern cars have <strong>Hill Hold Assist</strong> (standard on many trims now). Stop on the incline, release the brake, and the car holds itself ~2 seconds while you move to the accelerator — no roll-back, no handbrake needed. The handbrake method still works and is a fine habit for very steep slopes, but it's optional when Hill Hold is fitted. The handbrake's real job is parking on slopes.</p></details>
+
+    <details><summary>Why does resale value matter so much?</summary>
+      <p>Over a 7–10 year keep, depreciation is often the <strong>single biggest cost</strong> — bigger than fuel or service. A car holding 70% of value (Maruti) vs 40% (some others) can be ₹2–3 L cheaper to own despite a higher sticker. Resale is why a pricier-but-popular car can be the cheaper long-term choice.</p></details>
+
+    <details><summary>SUV vs sedan for Indian roads?</summary>
+      <p><strong>SUV:</strong> higher clearance (clears bad roads, monsoon), commanding view, easier entry/exit, better resale, but wider/taller (harder in tight lanes & parking) and usually thirstier. <strong>Sedan:</strong> better mileage, quieter at highway speed, more composed handling, bigger boot, but low nose scrapes on bad roads/speed breakers when loaded. Match to your worst roads and your parking reality.</p></details>
   </section>
 
   <footer class="wrap">
-    <p><strong>India New Car Buyer Guide</strong> — built from independent buyer research, 2026. Prices are CSD-scheme Pune figures for relative comparison; confirm exact city/scheme pricing with dealers. Not affiliated with any manufacturer. Figures are estimates and may change.</p>
+    <p><strong>India New Car Buyer Guide</strong> — built from independent buyer research, 2026. Prices are CSD-scheme Pune figures for relative comparison; confirm exact city/scheme pricing with dealers. Not affiliated with any manufacturer. Figures are estimates and may change. Always test-drive before deciding.</p>
   </footer>
 </div>
 
 <script>
-// ---- DATA (from buyer research; CSD on-road Pune, mid-2026) ----
+// ---- DATA: CSD on-road Pune, mid-2026 (from buyer research) ----
 const CARS = [
-  {name:"Maruti Dzire VXi MT", body:"Sedan", onroad:7.70, econ:21, gc:163, star:5, boot:382, resale:55, tco:18.7, pick:false, note:"Value pick: 5★, rear vents, thrifty. Base features."},
-  {name:"Maruti Fronx Delta MT", body:"Crossover", onroad:8.50, econ:20, gc:190, star:4, boot:308, resale:60, tco:null, pick:false, note:"Cheap crossover, but stripped mid-trim, not a true SUV."},
-  {name:"Maruti Dzire ZXi MT", body:"Sedan", onroad:9.00, econ:21, gc:163, star:5, boot:382, resale:55, tco:18.7, pick:false, note:"Loaded sedan: camera, cruise, LED, alloys. Cheapest to own."},
-  {name:"Maruti Brezza VXi MT", body:"SUV", onroad:9.50, econ:16, gc:198, star:4, boot:328, resale:70, tco:null, pick:false, note:"Base SUV: 198mm clearance, no hybrid/cruise/LED."},
-  {name:"Maruti Brezza ZXi MT", body:"SUV", onroad:10.67, econ:15, gc:198, star:4, boot:328, resale:70, tco:22.8, pick:true, note:"Loaded SUV: hybrid, sunroof, 198mm. Best resale. The pick for rough roads."},
-  {name:"Honda Amaze ZX MT", body:"Sedan", onroad:10.04, econ:18, gc:165, star:5, boot:416, resale:40, tco:null, pick:false, note:"Refined 4-cyl, 5★. Weak resale, Honda service."},
-  {name:"Tata Nexon Creative 1.2T MT", body:"SUV", onroad:10.50, econ:14.5, gc:208, star:5, boot:382, resale:48, tco:25.0, pick:false, note:"5★ turbo SUV, sunroof, 208mm. Patchier service, weaker resale."},
-  {name:"Skoda Kylaq Signature MT", body:"SUV", onroad:9.80, econ:16, gc:189, star:5, boot:446, resale:48, tco:24.0, pick:false, note:"5★, best build, big boot. Skoda service is the worry."},
-  {name:"Honda Amaze ZX CVT", body:"Sedan", onroad:11.00, econ:15, gc:165, star:5, boot:416, resale:40, tco:24.9, pick:false, note:"Only car here with ADAS + true auto. Comfort pick, costly to own."},
-  {name:"Honda Elevate V MT", body:"SUV", onroad:11.50, econ:14, gc:220, star:5, boot:458, resale:42, tco:26.6, pick:false, note:"Best engine + 220mm + 458L boot. Dearest to own, stripped trim."},
-  {name:"Maruti Victoris ZXi(O) MT", body:"SUV", onroad:13.50, econ:17, gc:210, star:5, boot:439, resale:60, tco:null, pick:false, note:"No-compromise: 5★ + NA + Maruti + 210mm + ADAS. Priciest here."},
+  {name:"Dzire VXi MT",brand:"Maruti",body:"Sedan",trans:"Manual",onroad:7.70,econ:21,gc:163,star:5,boot:382,width:1735,resale:55,tco:18.7,adas:0,pick:false,note:"Value pick: 5★, rear vents, thrifty, narrow. Base features."},
+  {name:"Dzire VXi AMT",brand:"Maruti",body:"Sedan",trans:"Automatic",onroad:8.20,econ:20,gc:163,star:5,boot:382,width:1735,resale:55,tco:19.2,adas:0,pick:false,note:"VXi as auto (AMT) — jerky in ghats, but cheap auto."},
+  {name:"Grand i10 Nios Asta",brand:"Hyundai",body:"Hatch",trans:"Manual",onroad:8.10,econ:20,gc:165,star:3,boot:260,width:1680,resale:45,tco:null,adas:0,pick:false,note:"Smallest entry hatch, no 5★, tiny boot. A step down for a family."},
+  {name:"i20 Sportz MT",brand:"Hyundai",body:"Hatch",trans:"Manual",onroad:8.12,econ:18,gc:170,star:3,boot:311,width:1775,resale:45,tco:null,adas:0,pick:false,note:"Premium cabin but only 3★ + weak resale."},
+  {name:"Aura SX MT",brand:"Hyundai",body:"Sedan",trans:"Manual",onroad:8.16,econ:19,gc:165,star:2,boot:402,width:1680,resale:45,tco:null,adas:0,pick:false,note:"Sub-4m sedan, big boot, but old 2★ rating. Avoid for family."},
+  {name:"Fronx Delta MT",brand:"Maruti",body:"Crossover",trans:"Manual",onroad:8.50,econ:20,gc:190,star:4,boot:308,width:1765,resale:60,tco:null,adas:0,pick:false,note:"Cheap crossover, thrifty. But stripped mid-trim, not a true SUV."},
+  {name:"Dzire ZXi MT",brand:"Maruti",body:"Sedan",trans:"Manual",onroad:9.00,econ:21,gc:163,star:5,boot:382,width:1735,resale:55,tco:18.7,adas:0,pick:true,note:"Loaded sedan: camera, cruise, LED, alloys. 5★, cheapest to own. Loses on 163mm clearance."},
+  {name:"i20 Asta MT",brand:"Hyundai",body:"Hatch",trans:"Manual",onroad:9.15,econ:18,gc:170,star:3,boot:311,width:1775,resale:45,tco:null,adas:0,pick:false,note:"Premium hatch but 3★ + small boot + weak resale at Dzire money."},
+  {name:"Brezza VXi MT",brand:"Maruti",body:"SUV",trans:"Manual",onroad:9.50,econ:16,gc:198,star:4,boot:328,width:1790,resale:70,tco:null,adas:0,pick:false,note:"Base SUV: 198mm clearance, best resale. No hybrid/cruise/LED. Widest here."},
+  {name:"XUV 3XO MX3 Pro MT",brand:"Mahindra",body:"SUV",trans:"Manual",onroad:9.81,econ:14.5,gc:201,star:5,boot:364,width:1821,resale:40,tco:13.7,adas:0,pick:false,note:"Only 5★ SUV under ₹10L. Most loaded (sunroof,10.25\" screen,cruise,Bi-LED). Turbo + 40% resale + Mahindra service."},
+  {name:"Kylaq Signature MT",brand:"Skoda",body:"SUV",trans:"Manual",onroad:9.80,econ:16,gc:189,star:5,boot:446,width:1783,resale:48,tco:24.0,adas:0,pick:false,note:"5★, best build, big boot. Turbo. Skoda service is the worry."},
+  {name:"Venue HX4 MT (1.2 NA)",brand:"Hyundai",body:"SUV",trans:"Manual",onroad:9.75,econ:17,gc:190,star:0,boot:350,width:1770,resale:50,tco:null,adas:0,pick:false,note:"Refined, decent resale, but current-gen is crash-UNTESTED. Risk for a family."},
+  {name:"Amaze ZX MT",brand:"Honda",body:"Sedan",trans:"Manual",onroad:10.04,econ:18,gc:165,star:5,boot:416,width:1733,resale:40,tco:null,adas:0,pick:false,note:"Refined 4-cyl, 5★, narrow. Weak resale, Honda service."},
+  {name:"Nexon Creative 1.2T MT",brand:"Tata",body:"SUV",trans:"Manual",onroad:10.50,econ:14.5,gc:208,star:5,boot:382,width:1804,resale:48,tco:25.0,adas:0,pick:false,note:"5★ turbo SUV, sunroof, 208mm clearance. Patchier service, weaker resale."},
+  {name:"Creta 1.5 E MT",brand:"Hyundai",body:"SUV",trans:"Manual",onroad:10.65,econ:15,gc:190,star:5,boot:433,width:1790,resale:55,tco:12.4,adas:0,pick:false,note:"Bigger midsize SUV, 5★, strong NA. But BARE base trim — no touchscreen, halogen, manual AC."},
+  {name:"Brezza ZXi MT",brand:"Maruti",body:"SUV",trans:"Manual",onroad:10.67,econ:15,gc:198,star:4,boot:328,width:1790,resale:70,tco:22.8,adas:0,pick:true,note:"Loaded SUV: hybrid, sunroof, 198mm, best resale. The pick for rough roads. 4★ untested."},
+  {name:"Amaze ZX CVT",brand:"Honda",body:"Sedan",trans:"Automatic",onroad:11.00,econ:15,gc:165,star:5,boot:416,width:1733,resale:40,tco:24.9,adas:1,pick:false,note:"Only car here with ADAS + true CVT auto. Comfort pick for long drives. Costly to own, weak resale."},
+  {name:"Elevate V MT",brand:"Honda",body:"SUV",trans:"Manual",onroad:11.50,econ:14,gc:220,star:5,boot:458,width:1790,resale:42,tco:26.6,adas:0,pick:false,note:"Best engine (1.5 4cyl) + 220mm + 458L boot. Dearest to own, stripped V trim."},
+  {name:"Creta EX+ MT",brand:"Hyundai",body:"SUV",trans:"Manual",onroad:11.68,econ:15,gc:190,star:5,boot:433,width:1790,resale:55,tco:null,adas:0,pick:false,note:"Featured Creta: touchscreen, alloys. Over typical ₹10L band but a complete midsize SUV."},
+  {name:"Victoris ZXi(O) MT",brand:"Maruti",body:"SUV",trans:"Manual",onroad:13.50,econ:17,gc:210,star:5,boot:439,width:1800,resale:60,tco:null,adas:1,pick:false,note:"No-compromise: 5★ + NA + Maruti + 210mm + ADAS. Priciest here, the safe-and-spacious choice."},
 ];
 
-const tbody=document.getElementById('carBody');
-let sortKey='onroad', sortAsc=true;
+const tbody=document.getElementById('carBody'),rowCount=document.getElementById('rowCount');
+let sortKey='onroad',sortAsc=true;
+const short=n=>n; // names already short
 
-function starHtml(s){
-  if(s>=5) return '<span class="star5">5★</span>';
-  if(s>=4) return '<span class="star4">4★</span>';
-  return '<span class="starN">NR</span>';
-}
-function bodyTag(b){
-  const c=b==='SUV'?'t-suv':b==='Sedan'?'t-sedan':'t-cross';
-  return '<span class="tag '+c+'">'+b+'</span>';
-}
+function starHtml(s){if(s>=5)return'<span class="star5">5★</span>';if(s>=4)return'<span class="star4">4★</span>';if(s>=3)return'<span class="star3">3★</span>';return'<span class="starN">NR</span>';}
 
 function render(){
-  const fb=fBody.value, fs=+fStar.value, fbud=+fBudget.value, fgc=+fGc.value;
+  const q=fSearch.value.trim().toLowerCase(),fb=fBody.value,ft=fTrans.value,fs=+fStar.value,fbud=+fBudget.value,fgc=+fGc.value;
   let rows=CARS.filter(c=>
-    (!fb||c.body===fb) && c.star>=fs && c.onroad<=fbud+0.001 && c.gc>=fgc
+    (!fb||c.body===fb)&&(!ft||c.trans===ft)&&c.star>=fs&&c.onroad<=fbud+.001&&c.gc>=fgc&&
+    (!q||(c.name+' '+c.brand+' '+c.body).toLowerCase().includes(q))
   );
-  rows.sort((a,b)=>{
-    let x=a[sortKey], y=b[sortKey];
-    if(x==null) x=sortAsc?Infinity:-Infinity;
-    if(y==null) y=sortAsc?Infinity:-Infinity;
-    if(typeof x==='string'){return sortAsc?x.localeCompare(y):y.localeCompare(x);}
-    return sortAsc?x-y:y-x;
-  });
+  rows.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];
+    if(x==null)x=sortAsc?1e9:-1e9; if(y==null)y=sortAsc?1e9:-1e9;
+    if(typeof x==='string')return sortAsc?x.localeCompare(y):y.localeCompare(x);
+    return sortAsc?x-y:y-x;});
+  rowCount.textContent=rows.length;
   tbody.innerHTML=rows.map(c=>`
     <tr class="${c.pick?'pick':''}" title="${c.note}">
-      <td class="name">${c.name}${c.pick?'<span class="pill">popular pick</span>':''}</td>
-      <td>${bodyTag(c.body)}</td>
-      <td>₹${c.onroad.toFixed(2)} L</td>
-      <td>~${c.econ} km/l</td>
+      <td class="name">${c.name}${c.pick?'<span class="pill">popular pick</span>':''}<span class="brand">${c.brand}</span></td>
+      <td><span class="tag t-${c.body}">${c.body}</span></td>
+      <td>${c.trans==='Automatic'?'Auto':'MT'}</td>
+      <td><strong>₹${c.onroad.toFixed(2)} L</strong></td>
+      <td>~${c.econ}</td>
       <td>${c.gc} mm</td>
       <td>${starHtml(c.star)}</td>
       <td>${c.boot} L</td>
+      <td>${c.width}</td>
       <td>~${c.resale}%</td>
-      <td>${c.tco?('~₹'+c.tco.toFixed(1)+' L'):'—'}</td>
-    </tr>`).join('') || '<tr><td colspan="9" style="text-align:center;color:var(--muted)">No cars match these filters.</td></tr>';
+      <td>${c.tco?('~₹'+c.tco.toFixed(1)+'L'):'—'}</td>
+      <td>${c.adas?'<span class="yes">Yes</span>':'<span class="no">—</span>'}</td>
+    </tr>`).join('')||'<tr><td colspan="12" style="text-align:center;color:var(--muted);padding:24px">No cars match these filters.</td></tr>';
 }
-
-document.querySelectorAll('#carTable th').forEach(th=>{
-  th.addEventListener('click',()=>{
-    const k=th.dataset.k;
-    if(sortKey===k) sortAsc=!sortAsc; else {sortKey=k; sortAsc=th.dataset.num?true:true;}
-    render();
-  });
-});
-['fBody','fStar'].forEach(id=>document.getElementById(id).addEventListener('change',render));
+document.querySelectorAll('#carTable th').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.k; if(sortKey===k)sortAsc=!sortAsc; else{sortKey=k;sortAsc=true;}
+  document.querySelectorAll('#carTable th').forEach(t=>{t.classList.remove('active');t.querySelector('.arr')?.remove()});
+  th.classList.add('active'); th.insertAdjacentHTML('beforeend',' <span class="arr">'+(sortAsc?'▲':'▼')+'</span>');
+  render();
+}));
+['fSearch','fBody','fTrans','fStar'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 fBudget.addEventListener('input',()=>{budgetVal.textContent='₹'+(+fBudget.value).toFixed(1)+' L';render();});
 fGc.addEventListener('input',()=>{gcVal.textContent=(+fGc.value<=150?'Any':fGc.value+' mm');render();});
 
-// ---- Ground clearance chart ----
-const gcData=[...CARS].sort((a,b)=>b.gc-a.gc);
-const gcMax=230;
-document.getElementById('gcChart').innerHTML=gcData.map(c=>{
-  const pct=(c.gc/gcMax*100).toFixed(1);
-  const col=c.gc>=195?'var(--good)':c.gc>=180?'var(--warn)':'var(--bad)';
-  return `<div class="bar-row"><div>${c.name.replace('Maruti ','').replace('Honda ','').replace('Tata ','').replace('Skoda ','')}</div>
-    <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${col}">${c.gc} mm</div></div>
-    <div style="text-align:right;color:var(--muted)">${c.body}</div></div>`;
-}).join('');
+// charts
+function bars(el,data,valFn,labelFn,colFn,max){
+  document.getElementById(el).innerHTML=data.map(c=>{
+    const v=valFn(c),pct=Math.max(4,v/max*100).toFixed(1);
+    return `<div class="bar-row"><div>${c.name}<span class="brand">${c.brand}</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${colFn(c)}">${labelFn(c)}</div></div>
+      <div style="text-align:right;color:var(--muted)">${c.body}</div></div>`;
+  }).join('');
+}
+bars('gcChart',[...CARS].sort((a,b)=>b.gc-a.gc),c=>c.gc,c=>c.gc+' mm',
+  c=>c.gc>=195?'var(--good)':c.gc>=180?'var(--warn)':'var(--bad)',230);
+bars('priceChart',[...CARS].sort((a,b)=>a.onroad-b.onroad),c=>c.onroad,c=>'₹'+c.onroad.toFixed(2)+'L',
+  c=>c.pick?'var(--pick)':'var(--accent)',16);
+bars('tcoChart',[...CARS].filter(c=>c.tco).sort((a,b)=>a.tco-b.tco),c=>c.tco,c=>'₹'+c.tco.toFixed(1)+'L',
+  c=>c.tco<=20?'var(--good)':c.tco<=24?'var(--warn)':'var(--bad)',28);
 
-// ---- Price ladder chart ----
-const pData=[...CARS].sort((a,b)=>a.onroad-b.onroad);
-const pMax=14;
-document.getElementById('priceChart').innerHTML=pData.map(c=>{
-  const pct=(c.onroad/pMax*100).toFixed(1);
-  const col=c.pick?'var(--pick)':'var(--accent)';
-  return `<div class="bar-row"><div>${c.name.replace('Maruti ','').replace('Honda ','').replace('Tata ','').replace('Skoda ','')}</div>
-    <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${col};color:#fff">₹${c.onroad.toFixed(2)} L</div></div>
-    <div style="text-align:right;color:var(--muted)">${c.star>=5?'5★':c.star>=4?'4★':'NR'}</div></div>`;
-}).join('');
-
-// ---- Quiz ----
-const ans={budget:null,road:null,prio:null,body:null};
-document.querySelectorAll('.quiz [data-q] button').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const q=btn.parentElement.dataset.q;
-    ans[q]=btn.dataset.v;
-    btn.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));
-    btn.classList.add('sel');
-    if(ans.budget&&ans.road&&ans.prio&&ans.body) showResult();
-  });
-});
+// quiz
+const ans={budget:null,road:null,prio:null,body:null,trans:null};
+document.querySelectorAll('.quiz [data-q] button').forEach(btn=>btn.addEventListener('click',()=>{
+  const q=btn.parentElement.dataset.q; ans[q]=btn.dataset.v;
+  btn.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel')); btn.classList.add('sel');
+  if(Object.values(ans).every(Boolean))showResult();
+}));
 function showResult(){
   const bud=+ans.budget;
-  let pool=CARS.filter(c=>c.onroad<=bud+0.001);
-  if(ans.body!=='any') pool=pool.filter(c=>c.body===ans.body);
-  if(!pool.length) pool=CARS.filter(c=>c.onroad<=bud+0.001);
-  // score
-  pool.forEach(c=>{
-    let s=0;
-    if(ans.road==='rough') s += (c.gc-150)/8 + (c.body==='SUV'?6:0);
-    else if(ans.road==='mixed') s += (c.gc-150)/14 + (c.body==='SUV'?3:0);
-    else s += c.econ*0.6;
-    if(ans.prio==='value') s += (30-(c.tco||30))*1.2 + c.econ*0.4;
-    if(ans.prio==='safety') s += (c.star>=5?12:c.star>=4?4:0);
-    if(ans.prio==='space') s += c.boot/40;
-    if(ans.prio==='resale') s += c.resale/4;
-    c._s=s;
-  });
+  let pool=CARS.filter(c=>c.onroad<=bud+.001);
+  if(ans.body!=='any')pool=pool.filter(c=>c.body===ans.body);
+  if(ans.trans!=='any')pool=pool.filter(c=>c.trans===ans.trans);
+  if(!pool.length)pool=CARS.filter(c=>c.onroad<=bud+.001);
+  pool.forEach(c=>{let s=0;
+    if(ans.road==='rough')s+=(c.gc-150)/7+(c.body==='SUV'?7:0)-(c.star<4?4:0);
+    else if(ans.road==='mixed')s+=(c.gc-150)/13+(c.body==='SUV'?3:0);
+    else s+=c.econ*0.7;
+    if(ans.prio==='value')s+=(30-(c.tco||28))*1.3+c.econ*0.4;
+    if(ans.prio==='safety')s+=(c.star>=5?14:c.star>=4?4:c.star>=3?-2:-8);
+    if(ans.prio==='space')s+=c.boot/35+c.width/400;
+    if(ans.prio==='resale')s+=c.resale/3.5;
+    c._s=s;});
   pool.sort((a,b)=>b._s-a._s);
-  const top=pool.slice(0,3);
-  const r=document.getElementById('quizResult');
+  const top=pool.slice(0,3),r=document.getElementById('quizResult');
   r.style.display='block';
-  r.innerHTML='<h3 style="margin-top:0">Your shortlist</h3>'+
-    top.map((c,i)=>`<p style="margin:8px 0"><strong>${i+1}. ${c.name}</strong> — ₹${c.onroad.toFixed(2)} L · ${c.gc}mm · ${c.star>=5?'5★':c.star>=4?'4★':'NR'} · ~${c.econ} km/l<br>
-      <span style="color:var(--muted);font-size:13.5px">${c.note}</span></p>`).join('')+
-    '<p style="font-size:12.5px;color:var(--muted);margin-bottom:0">Shortlist is generated from your answers and the comparison data above. Always test-drive before deciding.</p>';
+  r.innerHTML='<h3 style="margin-top:0">Your shortlist</h3>'+top.map((c,i)=>
+    `<p style="margin:9px 0"><strong>${i+1}. ${c.name}</strong> <span style="color:var(--muted)">(${c.brand})</span> — ₹${c.onroad.toFixed(2)}L · ${c.gc}mm · ${starHtml(c.star)} · ~${c.econ} km/l<br>
+     <span style="color:var(--muted);font-size:13.5px">${c.note}</span></p>`).join('')+
+    '<p style="font-size:12.5px;color:var(--muted);margin-bottom:0">Generated from your answers + the comparison data above. Always test-drive before deciding.</p>';
   r.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
-
 render();
 </script>
 </body>
