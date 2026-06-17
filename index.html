@@ -7,99 +7,99 @@
 <meta name="description" content="Interactive comparison of 20+ popular Indian cars (Maruti, Honda, Tata, Hyundai, Skoda, Mahindra, Nissan, Kia) by price, mileage, ground clearance, safety, boot, narrow-road fit and 10-year cost-to-own. CSD prices, clearly labelled.">
 <style>
   :root{
-    --bg:#0b0f1a; --bg2:#0f1420; --card:#161d2e; --card2:#1f293d; --line:#2a3650;
-    --txt:#eaf0fa; --muted:#94a6c4; --accent:#5aa9ff; --accent2:#8b6bff;
-    --good:#3ddc91; --warn:#ffc15e; --bad:#ff6f6f; --pick:#8b6bff;
-    --shadow:0 10px 30px rgba(0,0,0,.35);
+    --bg:#ffffff; --paper:#fafafa; --ink:#1a1a1a; --muted:#666; --faint:#8a8a8a;
+    --line:#e2e2e2; --line2:#cfcfcf; --accent:#c2362f; --accent-soft:#fbeeed;
+    --good:#1f8a4c; --warn:#b8791a; --bad:#c2362f;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    background:radial-gradient(1200px 600px at 80% -10%,#16213f 0,var(--bg) 55%);color:var(--txt);
-    line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1240px;margin:0 auto;padding:0 20px}
-  header{padding:54px 0 30px}
-  .eyebrow{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
-  h1{margin:8px 0 12px;font-size:38px;line-height:1.1;letter-spacing:-1px}
-  h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  h2{font-size:25px;margin:8px 0 4px;letter-spacing:-.4px}
-  h2 .num{color:var(--accent2);font-weight:800;margin-right:8px}
-  h3{font-size:16px;margin:20px 0 8px;color:var(--accent)}
-  .sub{color:var(--muted);font-size:16px;max-width:820px}
+  body{margin:0;font-family:var(--sans);background:var(--bg);color:var(--ink);
+    line-height:1.62;-webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  header{padding:52px 0 26px;border-bottom:3px double var(--line2)}
+  .eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+  h1{font-family:var(--serif);margin:10px 0 12px;font-size:42px;line-height:1.08;font-weight:700;letter-spacing:-.5px}
+  h2{font-family:var(--serif);font-size:27px;margin:6px 0 4px;font-weight:700;letter-spacing:-.3px}
+  h2 .num{color:var(--accent);font-weight:700;margin-right:10px;font-style:italic}
+  h3{font-size:15px;margin:20px 0 8px;color:var(--ink);font-weight:700}
+  .sub{color:var(--muted);font-size:17px;max-width:780px}
   .badges{margin-top:18px}
-  .badge{display:inline-block;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);
-    font-size:12.5px;padding:5px 12px;border-radius:30px;margin:5px 8px 0 0}
-  nav{position:sticky;top:0;z-index:50;background:rgba(11,15,26,.82);backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--line);padding:11px 0;margin-bottom:8px}
-  nav .wrap{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-  nav a{color:var(--muted);text-decoration:none;font-size:13.5px;padding:6px 12px;border-radius:8px;transition:.15s}
-  nav a:hover{color:var(--txt);background:rgba(255,255,255,.05)}
-  section{margin:46px 0;scroll-margin-top:64px}
-  .note{background:linear-gradient(180deg,rgba(255,193,94,.08),rgba(255,193,94,.03));
-    border:1px solid rgba(255,193,94,.25);border-left:3px solid var(--warn);padding:14px 18px;border-radius:10px;
-    font-size:14px;color:#f0e9da;margin:16px 0}
-  .note.blue{background:linear-gradient(180deg,rgba(90,169,255,.08),rgba(90,169,255,.03));
-    border-color:rgba(90,169,255,.25);border-left-color:var(--accent);color:#e4eefb}
-  .controls{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0;background:var(--card);
-    border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-  .controls label{font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:6px;font-weight:600}
-  select,input[type=range],input[type=search]{background:var(--bg2);color:var(--txt);border:1px solid var(--line);
-    border-radius:9px;padding:9px 11px;font-size:14px;font-weight:400}
+  .badge{display:inline-block;background:var(--paper);border:1px solid var(--line);color:var(--muted);
+    font-size:12.5px;padding:5px 11px;border-radius:3px;margin:5px 7px 0 0}
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:6px}
+  nav .wrap{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+  nav a{color:var(--muted);text-decoration:none;font-size:13.5px;padding:6px 11px;border-radius:4px;transition:.12s}
+  nav a:hover{color:var(--accent);background:var(--accent-soft)}
+  section{margin:48px 0;scroll-margin-top:60px}
+  .note{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--warn);
+    padding:14px 18px;border-radius:3px;font-size:14.5px;color:#3a3a3a;margin:16px 0}
+  .note.blue{border-left-color:var(--accent)}
+  .controls{display:flex;flex-wrap:wrap;gap:16px;margin:18px 0;background:var(--paper);
+    border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+  .controls label{font-size:12px;color:var(--faint);display:flex;flex-direction:column;gap:6px;
+    font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+  select,input[type=range],input[type=search]{background:#fff;color:var(--ink);border:1px solid var(--line2);
+    border-radius:4px;padding:8px 10px;font-size:14px;font-weight:400;font-family:var(--sans)}
   input[type=search]{min-width:200px}
   input[type=range]{padding:0;accent-color:var(--accent)}
-  .tableScroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
-  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:880px}
-  th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
-  th{background:var(--card2);cursor:pointer;user-select:none;position:sticky;top:0;font-size:11.5px;
-    text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
-  th:hover{color:var(--txt)}
+  .tableScroll{overflow-x:auto;border:1px solid var(--line2);border-radius:6px}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:880px}
+  th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:#f4f2ef;cursor:pointer;user-select:none;position:sticky;top:0;font-size:11px;
+    text-transform:uppercase;letter-spacing:.5px;color:var(--faint);font-weight:700;border-bottom:2px solid var(--line2)}
+  th:hover{color:var(--ink)}
   th.active{color:var(--accent)}
-  th .arr{font-size:10px;opacity:.7}
-  tbody tr{background:var(--card);transition:.12s}
-  tbody tr:hover{background:#1c2740}
-  tr.pick{background:linear-gradient(90deg,rgba(139,107,255,.16),rgba(139,107,255,.04))}
-  tr.pick:hover{background:rgba(139,107,255,.22)}
-  td.name{font-weight:600;white-space:normal;min-width:160px}
-  .brand{display:block;font-size:11px;color:var(--muted);font-weight:500}
-  .tag{font-size:10.5px;padding:3px 8px;border-radius:6px;font-weight:700}
-  .t-SUV{background:rgba(61,220,145,.14);color:var(--good)}
-  .t-Sedan{background:rgba(90,169,255,.14);color:var(--accent)}
-  .t-Crossover{background:rgba(255,193,94,.14);color:var(--warn)}
-  .t-Hatch{background:rgba(255,111,111,.12);color:var(--bad)}
-  .star5{color:var(--good);font-weight:800}
-  .star4{color:var(--warn);font-weight:800}
-  .star3{color:#ff944d;font-weight:800}
-  .starN{color:var(--bad);font-weight:800}
+  th .arr{font-size:10px}
+  tbody tr{background:#fff;transition:.1s}
+  tbody tr:nth-child(even){background:var(--paper)}
+  tbody tr:hover{background:var(--accent-soft)}
+  tr.pick{background:#fff7e8}
+  tr.pick:hover{background:#fdf0d4}
+  td.name{font-weight:700;white-space:normal;min-width:160px}
+  .brand{display:block;font-size:11px;color:var(--faint);font-weight:400}
+  .tag{font-size:10.5px;padding:3px 8px;border-radius:3px;font-weight:700;border:1px solid}
+  .t-SUV{background:#eaf6ef;color:var(--good);border-color:#cfe9d9}
+  .t-Sedan{background:#eef3fb;color:#2f5fa8;border-color:#d3e0f2}
+  .t-Crossover{background:#fbf3e6;color:var(--warn);border-color:#eddcc0}
+  .t-Hatch{background:#fbeeed;color:var(--bad);border-color:#f0d4d2}
+  .star5{color:var(--good);font-weight:700}
+  .star4{color:var(--warn);font-weight:700}
+  .star3{color:#cc7a29;font-weight:700}
+  .starN{color:var(--bad);font-weight:700}
   .yes{color:var(--good);font-weight:700}
-  .no{color:var(--muted)}
-  .pill{display:inline-block;background:var(--pick);color:#fff;font-size:10px;padding:2px 8px;border-radius:6px;margin-left:6px;font-weight:700;vertical-align:middle}
-  .legend{font-size:12.5px;color:var(--muted);margin-top:10px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+  .no{color:var(--faint)}
+  .pill{display:inline-block;background:var(--accent);color:#fff;font-size:10px;padding:2px 7px;
+    border-radius:3px;margin-left:6px;font-weight:700;vertical-align:middle;text-transform:uppercase;letter-spacing:.3px}
+  .legend{font-size:12.5px;color:var(--faint);margin-top:10px}
+  .card{background:#fff;border:1px solid var(--line2);border-radius:6px;padding:20px 22px}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  @media(max-width:780px){.grid2{grid-template-columns:1fr}h1{font-size:30px}}
-  .bar-row{display:grid;grid-template-columns:150px 1fr 64px;align-items:center;gap:12px;margin:7px 0;font-size:13px}
-  .bar-track{background:var(--card2);border-radius:7px;height:24px;overflow:hidden}
-  .bar-fill{height:100%;border-radius:7px;display:flex;align-items:center;padding-left:9px;font-size:11.5px;color:#0b0f1a;font-weight:800;min-width:42px}
-  .quiz button{background:var(--card2);border:1px solid var(--line);color:var(--txt);padding:9px 15px;
-    border-radius:10px;cursor:pointer;font-size:14px;margin:5px 8px 5px 0;transition:.15s}
-  .quiz button:hover{border-color:var(--accent);transform:translateY(-1px)}
-  .quiz button.sel{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;font-weight:700}
-  #quizResult{margin-top:20px;padding:18px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);display:none}
-  details{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:2px 18px;margin:11px 0}
-  summary{cursor:pointer;padding:13px 0;font-weight:600;font-size:15px;list-style:none}
+  @media(max-width:780px){.grid2{grid-template-columns:1fr}h1{font-size:32px}}
+  .bar-row{display:grid;grid-template-columns:160px 1fr 64px;align-items:center;gap:12px;margin:7px 0;font-size:13px}
+  .bar-track{background:var(--paper);border:1px solid var(--line);border-radius:3px;height:24px;overflow:hidden}
+  .bar-fill{height:100%;display:flex;align-items:center;padding-left:9px;font-size:11.5px;color:#fff;font-weight:700;min-width:46px}
+  .quiz button{background:#fff;border:1px solid var(--line2);color:var(--ink);padding:9px 15px;
+    border-radius:4px;cursor:pointer;font-size:14px;margin:5px 8px 5px 0;transition:.12s;font-family:var(--sans)}
+  .quiz button:hover{border-color:var(--accent);color:var(--accent)}
+  .quiz button.sel{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+  #quizResult{margin-top:20px;padding:18px;border-radius:6px;background:var(--paper);border:1px solid var(--line);display:none}
+  details{background:#fff;border:1px solid var(--line);border-radius:5px;padding:2px 18px;margin:10px 0}
+  summary{cursor:pointer;padding:13px 0;font-weight:700;font-size:15px;list-style:none}
   summary::-webkit-details-marker{display:none}
-  summary:before{content:"+ ";color:var(--accent);font-weight:800}
-  details[open] summary:before{content:"– "}
-  details p,details ul{font-size:14px;color:#d7e1f2;margin-top:0}
-  footer{border-top:1px solid var(--line);margin-top:56px;padding:26px 0 50px;color:var(--muted);font-size:13px}
+  summary:before{content:"+ ";color:var(--accent);font-weight:700}
+  details[open] summary:before{content:"\2013 "}
+  details p,details ul{font-size:14.5px;color:#3a3a3a;margin-top:0}
+  footer{border-top:3px double var(--line2);margin-top:54px;padding:24px 0 50px;color:var(--muted);font-size:13px}
   a{color:var(--accent)}
-  .count{color:var(--muted);font-size:13px}
+  .count{color:var(--faint);font-size:13px}
 </style>
 </head>
 <body>
 <header class="wrap">
   <div class="eyebrow">Independent buyer research · 2026</div>
-  <h1>🚗 India New Car <span>Buyer Guide</span></h1>
+  <h1>India New Car Buyer Guide</h1>
   <p class="sub">Compare 20+ popular ₹7–16 lakh cars on what actually decides a purchase: real price buildup, mileage, ground clearance, safety, boot, narrow-road fit, and 10-year cost-to-own. Sort, filter, and use the guided picker.</p>
   <div class="badges">
     <span class="badge">Maruti · Honda · Tata · Hyundai · Skoda · Mahindra · Nissan · Kia</span>
@@ -349,7 +349,7 @@ function bars(el,data,valFn,labelFn,colFn,max){
 bars('gcChart',[...CARS].sort((a,b)=>b.gc-a.gc),c=>c.gc,c=>c.gc+' mm',
   c=>c.gc>=195?'var(--good)':c.gc>=180?'var(--warn)':'var(--bad)',230);
 bars('priceChart',[...CARS].sort((a,b)=>a.onroad-b.onroad),c=>c.onroad,c=>'₹'+c.onroad.toFixed(2)+'L',
-  c=>c.pick?'var(--pick)':'var(--accent)',16);
+  c=>c.pick?'var(--warn)':'var(--accent)',16);
 bars('tcoChart',[...CARS].filter(c=>c.tco).sort((a,b)=>a.tco-b.tco),c=>c.tco,c=>'₹'+c.tco.toFixed(1)+'L',
   c=>c.tco<=20?'var(--good)':c.tco<=24?'var(--warn)':'var(--bad)',28);
 
