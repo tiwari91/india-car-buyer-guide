@@ -1,5 +1,7 @@
 # 🚗 India New Car Buyer Guide (2026)
 
+**Live:** https://tiwari91.github.io/india-car-buyer-guide/
+
 An interactive, single-page comparison tool for people buying a new car in India in the ₹7–16 lakh range. Built to cut through showroom confusion and help a buyer match a car to their **actual roads, budget, and priorities** — not marketing.
 
 ## What it does
@@ -27,7 +29,7 @@ A single self-contained `index.html` — no dependencies, no build step, no serv
 open index.html
 ```
 
-To host (static site): upload `index.html` to GitHub Pages, Netlify, Vercel, or any static host.
+It's hosted on GitHub Pages at https://tiwari91.github.io/india-car-buyer-guide/ (from the `master` branch). To host a copy elsewhere, upload `index.html` to Netlify, Vercel or any static host.
 
 ## Disclaimer
 
